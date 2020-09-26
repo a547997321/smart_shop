@@ -1,13 +1,16 @@
 $totalWidth : 1190px;
+
 // 头部
-header{
+header {
     width: 100%;
-    display: flex;
+    display: flex !important;
     flex-direction: column;
+    align-items: center;
 }
+
 // 顶部导航栏
-.g-site-nav{
-    &{
+.g-site-nav {
+    & {
         width: 100%;
         height: 32px;
         background-color: #f6f6f6;
@@ -15,7 +18,8 @@ header{
         justify-content: center;
         border-bottom: 1px solid #d9d9d7;
     }
-    .g-site-content{
+
+    .g-site-content {
         width: $totalWidth;
         height: 32px;
         line-height: 32px;
@@ -25,34 +29,41 @@ header{
     }
 
     // 顶部左侧
-    .g-site-nav-left{
-        &{
+    .g-site-nav-left {
+        & {
             display: flex;
             align-items: center;
         }
-        .g-welcome{
+
+        .g-welcome {
             padding-left: 19px;
             padding-right: 14px;
         }
-        .g-normal{
-            padding:0 3px;
+
+        .g-normal {
+            padding: 0 3px;
         }
     }
+
     // 顶部右侧
-    .g-site-nav-right{
-        &{
+    .g-site-nav-right {
+        & {
             display: flex;
             align-items: center;
         }
-        &>span{
+
+        &>span {
             text-align: center;
             margin-left: 6px;
         }
+
         // 我的购物
-        .g-myocj{
+        .g-myocj {
             width: 100px;
         }
-        .g-myocj:hover,.g-weixin:hover{
+
+        .g-myocj:hover,
+        .g-weixin:hover {
             height: 24px;
             line-height: 24px;
             position: relative;
@@ -60,21 +71,26 @@ header{
             border: 1px solid #ccc;
             border-bottom: none;
         }
-        .g-myocj:hover .g-myocj-more{
+
+        .g-myocj:hover .g-myocj-more {
             display: block;
         }
-        .g-myocj:hover .icon-down{
+
+        .g-myocj:hover .icon-down {
             display: inline-block;
         }
+
         // 箭头
-        .g-myocj:hover .icon-up{
+        .g-myocj:hover .icon-up {
             display: none;
         }
-        .icon-down{
+
+        .icon-down {
             display: none;
         }
+
         // 隐藏列表
-        .g-myocj-more{
+        .g-myocj-more {
             display: none;
             position: relative;
             width: 100px;
@@ -82,19 +98,22 @@ header{
             border: 1px solid #ccc;
             border-top: none;
             background-color: white;
-            top:-1px;
+            top: -1px;
             left: -1px;
-            li{
+
+            li {
                 text-align: center;
             }
         }
+
         // 微信二维码
-        .g-weixin{
+        .g-weixin {
             width: 70px;
             position: relative;
         }
-        .g-weixin-pic{
-            display:none;
+
+        .g-weixin-pic {
+            display: none;
             flex-direction: column;
             position: absolute;
             top: 22px;
@@ -103,17 +122,203 @@ header{
             background-color: white;
             z-index: -1;
         }
-        .g-weixin-pic img{
+
+        .g-weixin-pic img {
             width: 222px;
             height: 222px;
             padding: 0 13px;
         }
-        .g-weixin:hover .g-weixin-pic{
+
+        .g-weixin:hover .g-weixin-pic {
             display: block;
         }
 
     }
 }
-.g-side-bar{
 
+.g-side-bar {
+    & {
+        width: 84px;
+        // height: 353px;
+        position: fixed;
+        bottom: 10px;
+        right: 50%;
+        margin-right: -690px;
+        z-index: 200000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .g-side-AD {
+        width: 100%;
+        height: 80px;
+        background-color: yellow;
+    }
+
+    .g-side-AD img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .bird {
+        border-top: 1px dotted #d3d3d3;
+        width: 100%;
+        height: 22px;
+        padding-top: 55px;
+        text-align: center;
+        background: #fff url(https://cdnimg.ocj.com.cn/common/theme/v1/images/common/bg.site.nav.png) 16px -539px no-repeat;
+    }
+
+    .bird-txt1 {
+        height: 22px;
+        line-height: 22px;
+    }
+
+    .bird-txt1 a {
+        text-align: center;
+        color: #5c686e;
+    }
+
+    .g-go-top {
+        width: 84px;
+        height: 30px;
+        background: #4b4c50 url(https://cdnimg.ocj.com.cn/common/theme/v1/images/common/bg.site.nav.png) -1px -604px no-repeat;
+        color: #fff;
+        font-weight: bold;
+        text-indent: 23px;
+        line-height: 30px;
+        cursor: pointer;
+    }
+}
+
+.g-side-bar ul {
+    height: 20px;
+    width: 84px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.g-side-bar li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.active {
+    background-color: red;
+}
+
+.g-side-bar .rightFixNavButtonLink {
+    width: 84px;
+    height: 26px;
+    line-height: 26px;
+    color: #3c3c3c;
+    text-align: center;
+}
+
+.g-header-main {
+    & {
+        height: 82px;
+        width: $totalWidth;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &>img:nth-of-type(1) {
+        width: 140px;
+        height: 74px;
+    }
+
+    &>img:nth-of-type(2) {
+        width: 210px;
+        height: 70px;
+    }
+
+    &>img:nth-of-type(3) {
+        width: 140px;
+        height: 69px;
+    }
+
+    .search-bar {
+        width: 444px;
+        height: 34px;
+        border: 3px solid #f12e24;
+        position: relative;
+    }
+
+    .search-bar input {
+        float: left;
+        width: 364px;
+        height: 28px;
+        line-height: 34px;
+        text-indent: 8px;
+        border: 0;
+        color: #9da6ab;
+    }
+
+    .search-bar button {
+        float: left;
+        background: #f12e24;
+        width: 74px;
+        height: 28px;
+        border: 0;
+        color: #fff;
+        font-size: 16px;
+        line-height: 32px;
+        font-weight: bold;
+        text-align: center;
+        font-family: 'Microsoft YaHei';
+        cursor: pointer;
+    }
+
+    .search-bar ul {
+        width: 364px;
+        height: 28px;
+        line-height: 28px;
+        position: absolute;
+        top: 28px;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.g-header-menu {
+    & {
+        width: 100%;
+        height: 34px;
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .g-menu-container {
+        height: 100%;
+        width: $totalWidth;
+        display: flex;
+        justify-content: start;
+    }
+
+    .g-menu-container a {
+        height: 34px;
+        line-height: 34px;
+        text-align: center;
+        padding: 0 19px;
+        font-weight: bold;
+        color: #fff;
+        font-size: 15px;
+    }
+
+    .g-menu-container a:first-child {
+        width: 220px;
+    }
+
+    .g-menu-container a:hover {
+        background-color: rgb(184, 54, 47);
+    }
 }

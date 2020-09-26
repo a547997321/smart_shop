@@ -4,9 +4,7 @@ form, fieldset, legend, input, button, textarea, menu {
   margin: 0;
   padding: 0;
 }
-body{
-  font-family: 'Microsoft YaHei', Arial;
-}
+
 header, footer, section, article, aside, nav, hgroup,
 address, figure, figcaption, menu, details {
   display: block;
