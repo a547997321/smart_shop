@@ -10,9 +10,11 @@ define([], function () {
                 console.log(data);
                 let strhtml = "";
                 $.each(data, function (index, value) {
-                    strhtml += `
-                    <div class="listTv"><img src="${value.url}" alt=""><span>${value.introduce}</span><span>￥${value.price}</span></div>
-                    `
+                    if (index < 6) {
+                        strhtml += `
+                        <div class="listTv"><img src="${value.url}" alt=""><span>${value.introduce}</span><span>￥${value.price}</span></div>
+                        `;
+                    }
                 })
                 $('.TvreboRight').html(strhtml);
             });
