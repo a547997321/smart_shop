@@ -1,6 +1,175 @@
-.indexNavContentBox{
-    width: 100%;
-    height: 500px;
-    background: url(../img/AD.png) no-repeat;
-    background-size: contain;
+$totalWidth: 1190px;
+
+.indexNavContentBox {
+    & {
+        width: 100%;
+        background-color: yellow;
+        display: flex;
+        justify-content: center;
+    }
+
+    .indexNavContent {
+        width: $totalWidth;
+        background-color: blue;
+        display: flex;
+    }
+}
+
+// 左侧菜单栏
+.indexLeftNav {
+    width: 220px;
+
+    .indexLeftNavBox {
+        width: 100%;
+        height: 39px;
+        line-height: 39px;
+        padding-left: 15px;
+        background-color: green;
+
+        // 图标大小
+        span:nth-of-type(1) {
+            font-size: 22px;
+        }
+
+        // 文字大小
+        span:nth-of-type(2) {
+            font-size: 13px;
+        }
+    }
+
+    .indexLeftNavBoxBg {
+        background: url("https://cdnimg.ocj.com.cn/common/webpc/image/imageindex/leftnavbg.png") no-repeat;
+
+        img {
+            height: 22px;
+            width: auto;
+            margin-left: 39px;
+            margin-top: 10px;
+        }
+    }
+}
+
+// 上方直播推荐
+.indexLeftNavShowConent {
+    width: 970px;
+    height: 90px;
+    background: olive;
+    display: flex;
+    align-items: center;
+
+    .hIndexvideoNavChangeNox {
+        height: 84px;
+        width: 457px;
+        display: flex;
+
+        .hTvChangeBox {}
+    }
+}
+
+// div公共样式
+%TvreboRight {
+    width: 748px;
+    height: 100%;
+    background-color: chocolate;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+
+    .listTv {
+        width: 236px;
+        height: 321px;
+        padding: 8px;
+        background-color: coral;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        font-size: 14px;
+        border: 1px solid #e8e6e6;
+
+        &:hover {
+            border: 1px solid #f12e24;
+        }
+
+        img {
+            width: 220px;
+            height: 220px;
+        }
+
+        span:nth-of-type(1) {
+            height: 36px;
+            line-height: 36px;
+        }
+
+        span:nth-of-type(2) {
+            color: red;
+            font-weight: bold;
+            font-family: "Arial";
+        }
+    }
+}
+
+// 主播推荐
+.hindexTvrebo {
+    width: $totalWidth;
+    padding-top: 10px;
+    background-color: blueviolet;
+
+    .Tvrebo {
+        width: 100%;
+        height: 658px;
+        background-color: brown;
+        display: flex;
+        justify-content: space-between;
+
+        .TvreboLeft {
+            width: 418px;
+            height: 100%;
+            background-color: chartreuse;
+        }
+
+        .TvreboRight {
+            @extend %TvreboRight;
+        }
+    }
+}
+
+
+// 团购、全球购
+.newChannel{
+    width: $totalWidth;
+    display: flex;
+    justify-content: space-between;
+}
+.newChannelSliderItem {
+    border: 1px solid #e8e6e6;
+    a{
+        width: 418px;
+        height: 312px;
+        text-align: center;
+        display: block;
+
+        img{
+            padding-top: 10px;
+            margin:0 auto;
+        }
+    }
+}
+.indexTvrebosliderBoxContent{
+    @extend %TvreboRight;
+
+}
+// 标题样式
+.newChannelTitle {
+    width: $totalWidth;
+    height: 44px;
+    font-size: 24px;
+    color: #424242;
+    display: flex;
+    align-items: center;
+
+    .title-txt2 {
+        font-size: 16px;
+        padding-left: 20px;
+    }
 }
