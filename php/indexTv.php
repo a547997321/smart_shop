@@ -1,4 +1,6 @@
 <?php
+header('Access-Control-Allow-Origin:*');//跨域访问的域名，*表示所有
+header('Access-Control-Allow-Method:POST,GET');//跨域支持的请求方式。
 
 $arr = array(
     array('url'=>'https://cdnimg.ocj.com.cn/item/product/2020/4/main_1586229926473_371L.jpg','price'=>'234','introduce'=>'[你爱的，好恰的]'),

@@ -1,0 +1,157 @@
+$totalWidth: 1110px;
+
+// 列表页面主题内容
+.listContainer {
+    width: $totalWidth;
+}
+
+
+// div公共样式
+%Tvrebolist {
+    width: 100%;
+
+    .listTv {
+        width: 200px;
+        height: 235px;
+        padding: 10px 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        font-size: 14px;
+
+        img {
+            width: 170px;
+            height: 170px;
+            cursor: pointer;
+        }
+
+        span:nth-of-type(1) {
+            height: 36px;
+            line-height: 36px;
+            cursor: pointer;
+        }
+
+        &:hover {
+            span:nth-of-type(1) {
+                color: blue;
+                text-decoration-line: underline;
+                ;
+
+            }
+        }
+
+        span:nth-of-type(2) {
+            color: red;
+            font-weight: bold;
+            font-family: "Arial";
+        }
+
+
+    }
+}
+
+.listContainerContent {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    // 分页信息
+    .listHeader {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        font-size: 12px;
+
+        a {
+            color: #505966;
+        }
+
+        label {
+            color: #737f86;
+        }
+    }
+
+
+}
+
+// 商品分类、本周热卖
+.listLeft {
+    width: 200px;
+
+    %h3 {
+        font-size: 14px;
+        padding: 5px 0px 5px 10px;
+    }
+
+    // 生鲜食材
+    .pv_shop_list_subcategory {
+        width: 100%;
+        height: 139px;
+        border: 1px solid #d7d7d7;
+
+        h3 {
+            @extend %h3;
+            border-bottom: 1px solid #d7d7d7;
+        }
+
+        ul {
+            padding: 5px 0px 5px 0px;
+        }
+
+        li a {
+            display: block;
+            padding-left: 20px;
+            height: 24px;
+            line-height: 24px;
+        }
+
+        li:hover {
+            background: url("https://cdnimg.ocj.com.cn/common/theme/v1/images/bg.icon.1.gif") 5px -28px no-repeat;
+        }
+    }
+
+    // 本周热卖
+    .pv_shop_list_hot {
+        margin-top: 20px;
+        width: 100%;
+
+        h3 {
+            @extend %h3;
+            border-top: 2px solid #239ee2;
+        }
+
+        .list_hot {
+            @extend %Tvrebolist;
+        }
+    }
+}
+
+.listRight{
+    width: 900px;
+
+    .pv_shop_list_bar{
+        width: 900px;
+        height: 42px;
+        border: #d7d7d7 1px solid;
+        display: flex;
+        align-items: center;
+
+        div{
+            width: 67px;
+            height: 30px;
+            line-height: 30px;
+            border: 1px solid #d7d7d7;
+            text-align: center;
+            color: #9a948d;
+            margin-left: 5px;
+        }
+
+        .active{
+            border: 1px solid rgb(241,46,36);
+        }
+
+    }
+}

@@ -321,199 +321,100 @@ footer {
   justify-content: center;
   margin-top: 15px; }
 
-.indexNavContentBox {
-  width: 100%;
-  background-color: yellow;
-  display: flex;
-  justify-content: center; }
-.indexNavContentBox .indexNavContent {
-  width: 1190px;
-  background-color: blue;
-  display: flex; }
+.listContainer {
+  width: 1110px; }
 
-.indexLeftNav {
-  width: 220px; }
-.indexLeftNav .indexLeftNavBox {
-  width: 100%;
-  height: 39px;
-  line-height: 39px;
-  padding-left: 15px;
-  background-color: green; }
-.indexLeftNav .indexLeftNavBox span:nth-of-type(1) {
-  font-size: 22px; }
-.indexLeftNav .indexLeftNavBox span:nth-of-type(2) {
-  font-size: 13px; }
-.indexLeftNav .indexLeftNavBoxBg {
-  background: url("https://cdnimg.ocj.com.cn/common/webpc/image/imageindex/leftnavbg.png") no-repeat; }
-.indexLeftNav .indexLeftNavBoxBg img {
-  height: 22px;
-  width: auto;
-  margin-left: 39px;
-  margin-top: 10px; }
-
-.indexLeftNavShowConent {
-  width: 970px;
-  height: 90px;
-  background: olive;
-  display: flex;
-  align-items: center; }
-.indexLeftNavShowConent .hIndexvideoNavChangeNox {
-  height: 84px;
-  width: 457px;
-  display: flex; }
-
-.hindexTvrebo .Tvrebo .TvreboRight, .indexTvrebosliderBoxContent {
-  width: 748px;
-  height: 100%;
-  background-color: chocolate;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: space-between; }
-.hindexTvrebo .Tvrebo .TvreboRight .listTv, .indexTvrebosliderBoxContent .listTv {
-  width: 236px;
-  height: 321px;
-  padding: 8px;
-  background-color: coral;
+.listLeft .pv_shop_list_hot .list_hot {
+  width: 100%; }
+.listLeft .pv_shop_list_hot .list_hot .listTv {
+  width: 200px;
+  height: 235px;
+  padding: 10px 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  font-size: 14px;
-  border: 1px solid #e8e6e6; }
-.hindexTvrebo .Tvrebo .TvreboRight .listTv:hover, .indexTvrebosliderBoxContent .listTv:hover {
-  border: 1px solid #f12e24; }
-.hindexTvrebo .Tvrebo .TvreboRight .listTv img, .indexTvrebosliderBoxContent .listTv img {
-  width: 220px;
-  height: 220px; }
-.hindexTvrebo .Tvrebo .TvreboRight .listTv span:nth-of-type(1), .indexTvrebosliderBoxContent .listTv span:nth-of-type(1) {
+  font-size: 14px; }
+.listLeft .pv_shop_list_hot .list_hot .listTv img {
+  width: 170px;
+  height: 170px;
+  cursor: pointer; }
+.listLeft .pv_shop_list_hot .list_hot .listTv span:nth-of-type(1) {
   height: 36px;
-  line-height: 36px; }
-.hindexTvrebo .Tvrebo .TvreboRight .listTv span:nth-of-type(2), .indexTvrebosliderBoxContent .listTv span:nth-of-type(2) {
+  line-height: 36px;
+  cursor: pointer; }
+.listLeft .pv_shop_list_hot .list_hot .listTv:hover span:nth-of-type(1) {
+  color: blue;
+  text-decoration-line: underline; }
+.listLeft .pv_shop_list_hot .list_hot .listTv span:nth-of-type(2) {
   color: red;
   font-weight: bold;
   font-family: "Arial"; }
 
-.hindexTvrebo {
-  width: 1190px;
-  padding-top: 10px;
-  background-color: blueviolet; }
-.hindexTvrebo .Tvrebo {
-  width: 100%;
-  height: 658px;
-  background-color: brown;
-  display: flex;
-  justify-content: space-between; }
-.hindexTvrebo .Tvrebo .TvreboLeft {
-  width: 418px;
-  height: 100%;
-  background-color: chartreuse; }
-
-.newChannel {
-  width: 1190px;
-  display: flex;
-  justify-content: space-between; }
-
-.newChannelSliderItem {
-  border: 1px solid #e8e6e6; }
-.newChannelSliderItem a {
-  width: 418px;
-  height: 312px;
-  text-align: center;
-  display: block; }
-.newChannelSliderItem a img {
-  padding-top: 10px;
-  margin: 0 auto; }
-
-.newChannelTitle {
-  width: 1190px;
-  height: 44px;
-  font-size: 24px;
-  color: #424242;
-  display: flex;
-  align-items: center; }
-.newChannelTitle .title-txt2 {
-  font-size: 16px;
-  padding-left: 20px; }
-
-.hindexBannerToCenterslider {
-  width: 1190px;
-  height: 130px;
-  margin: 33px 0; }
-.hindexBannerToCenterslider img {
-  width: 100%;
-  height: 100%; }
-
-.hindexProjectList {
-  width: 1190px;
-  background: yellow; }
-
-.hindexProjectListBox {
+.listContainerContent {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; }
-.hindexProjectListBox .hindexProjectListBoxTitle {
-  height: 43px;
-  line-height: 30px;
+.listContainerContent .listHeader {
   width: 100%;
-  border-bottom: 1px solid black;
-  padding-bottom: 12px;
+  height: 40px;
   display: flex;
-  position: relative; }
-.hindexProjectListBox .hindexProjectListBoxTitle span:nth-child(1) {
-  font-size: 24px;
-  color: #424242; }
-.hindexProjectListBox .hindexProjectListBoxTitle span:nth-child(2) {
-  margin-left: 30px;
-  font-size: 16px;
-  color: #727272; }
-.hindexProjectListBox .hindexProjectListBoxTitle p {
-  width: 80px;
+  align-items: center;
+  justify-content: start;
+  font-size: 12px; }
+.listContainerContent .listHeader a {
+  color: #505966; }
+.listContainerContent .listHeader label {
+  color: #737f86; }
+
+.listLeft {
+  width: 200px; }
+.listLeft .pv_shop_list_subcategory h3, .listLeft .pv_shop_list_hot h3 {
+  font-size: 14px;
+  padding: 5px 0px 5px 10px; }
+.listLeft .pv_shop_list_subcategory {
+  width: 100%;
+  height: 139px;
+  border: 1px solid #d7d7d7; }
+.listLeft .pv_shop_list_subcategory h3 {
+  border-bottom: 1px solid #d7d7d7; }
+.listLeft .pv_shop_list_subcategory ul {
+  padding: 5px 0px 5px 0px; }
+.listLeft .pv_shop_list_subcategory li a {
+  display: block;
+  padding-left: 20px;
   height: 24px;
-  text-align: center;
-  line-height: 24px;
-  border: 1px solid #dbdbdb;
-  position: absolute;
-  top: 9px;
-  right: 0; }
-.hindexProjectListBox .hindexProjectListBoxLeft {
-  width: 290px;
-  height: 590px;
-  background-color: blue; }
-.hindexProjectListBox .hindexProjectListBoxRight {
+  line-height: 24px; }
+.listLeft .pv_shop_list_subcategory li:hover {
+  background: url("https://cdnimg.ocj.com.cn/common/theme/v1/images/bg.icon.1.gif") 5px -28px no-repeat; }
+.listLeft .pv_shop_list_hot {
+  margin-top: 20px;
+  width: 100%; }
+.listLeft .pv_shop_list_hot h3 {
+  border-top: 2px solid #239ee2; }
+
+.listRight {
+  width: 900px; }
+.listRight .pv_shop_list_bar {
   width: 900px;
-  height: 590px;
-  background-color: green;
+  height: 42px;
+  border: #d7d7d7 1px solid;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: space-between; }
-.hindexProjectListBox .hindexProjectListBoxRight div {
-  width: 222px;
-  height: 291px;
-  padding: 8px 0;
-  background-color: coral;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  font-size: 14px;
-  border: 1px solid #e8e6e6; }
-.hindexProjectListBox .hindexProjectListBoxRight div:hover {
+  align-items: center; }
+.listRight .pv_shop_list_bar div {
+  width: 67px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #d7d7d7;
+  text-align: center;
+  color: #9a948d;
+  margin-left: 5px; }
+.listRight .pv_shop_list_bar .active {
   border: 1px solid #f12e24; }
-.hindexProjectListBox .hindexProjectListBoxRight div img {
-  width: 220px;
-  height: 220px; }
-.hindexProjectListBox .hindexProjectListBoxRight div span:nth-of-type(1) {
-  height: 36px;
-  line-height: 36px; }
-.hindexProjectListBox .hindexProjectListBoxRight div span:nth-of-type(2) {
-  color: red;
-  font-weight: bold;
-  font-family: "Arial"; }
 
 body {
   display: flex;
   flex-direction: column;
   align-items: center; }
 
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=list.css.map */

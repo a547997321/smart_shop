@@ -23,6 +23,7 @@ $totalWidth:1190px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 
     .hindexProjectListBoxTitle {
         height: 43px;
@@ -34,16 +35,17 @@ $totalWidth:1190px;
         position: relative;
 
         span:nth-child(1) {
-
             font-size: 24px;
             color: #424242;
         }
+
         span:nth-child(2) {
             margin-left: 30px;
             font-size: 16px;
             color: #727272;
         }
-        p{
+
+        p {
             width: 80px;
             height: 24px;
             text-align: center;
@@ -54,15 +56,53 @@ $totalWidth:1190px;
             right: 0;
         }
     }
-    .hindexProjectListBoxLeft{
+
+    .hindexProjectListBoxLeft {
         width: 290px;
         height: 590px;
         background-color: blue;
     }
-    .hindexProjectListBoxRight{
+
+    .hindexProjectListBoxRight {
         width: 900px;
         height: 590px;
         background-color: green;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+
+        div {
+            width: 222px;
+            height: 291px;
+            padding: 8px 0;
+            background-color: coral;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 14px;
+            border: 1px solid #e8e6e6;
+
+            &:hover {
+                border: 1px solid #f12e24;
+            }
+
+            img {
+                width: 220px;
+                height: 220px;
+            }
+
+            span:nth-of-type(1) {
+                height: 36px;
+                line-height: 36px;
+            }
+
+            span:nth-of-type(2) {
+                color: red;
+                font-weight: bold;
+                font-family: "Arial";
+            }
+        }
     }
 
 }
