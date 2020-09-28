@@ -1,5 +1,6 @@
 $totalWidth: 1190px;
 
+// 轮播图模块
 .indexNavContentBox {
     & {
         width: 100%;
@@ -25,6 +26,7 @@ $totalWidth: 1190px;
         line-height: 39px;
         padding-left: 15px;
         background-color: green;
+        cursor: pointer;
 
         // 图标大小
         span:nth-of-type(1) {
@@ -61,9 +63,48 @@ $totalWidth: 1190px;
         height: 84px;
         width: 457px;
         display: flex;
+        align-items: center;
+        background-color: royalblue;
 
+        // 小标题 热门直播
+        .gNavTitle {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+            span {
+                width: 60px;
+                height: 40px;
+                line-height: 40px;
+                background-color: saddlebrown;
+                text-align: center;
+
+            }
+
+            span:nth-child(1) {
+                border: 1px solid #e8e6e6;
+                border-right: none;
+                position: relative;
+                left: 1px;
+            }
+
+            span:nth-child(2) {
+                width: 58px;
+                position: relative;
+                left: 2px;
+            }
+        }
     }
 }
+
+// 电视购物
+.gNavTV {
+    width: 393px;
+    height: 80px;
+    background-color: salmon;
+    border: 1px solid #e8e6e6;
+}
+
 
 // div公共样式
 %TvreboRight {
@@ -135,29 +176,33 @@ $totalWidth: 1190px;
 
 
 // 团购、全球购
-.newChannel{
+.newChannel {
     width: $totalWidth;
     display: flex;
     justify-content: space-between;
 }
+
 .newChannelSliderItem {
     border: 1px solid #e8e6e6;
-    a{
+
+    a {
         width: 418px;
         height: 312px;
         text-align: center;
         display: block;
 
-        img{
+        img {
             padding-top: 10px;
-            margin:0 auto;
+            margin: 0 auto;
         }
     }
 }
-.indexTvrebosliderBoxContent{
+
+.indexTvrebosliderBoxContent {
     @extend %TvreboRight;
 
 }
+
 // 标题样式
 .newChannelTitle {
     width: $totalWidth;

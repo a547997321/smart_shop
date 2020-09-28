@@ -213,11 +213,46 @@ header {
     line-height: 26px;
     color: #3c3c3c;
     text-align: center;
+    
 
-    .active{
-        background-color: red;
-        color: white;
-    }
+}
+
+// 轮播图样式
+#img-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#img-box img {
+    position: absolute;
+    display: block;
+    opacity: 0;
+    float: left;
+    cursor:pointer;
+}
+
+#img-box #img-num{
+    position:absolute;
+    /* border:2px solid red; */
+    bottom:0px;
+    left:15%;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+}
+#img-box #img-num li{
+    display:inline-block;
+    list-style:none;
+    color:#fff;
+    text-align: center;
+    cursor: pointer;
+    width:10px; 
+    height:10px;
+    border-radius: 50%;
+    background-color:white;
+    margin-left: 5px;
+    position: relative;
+    top: 15px;
 }
 
 .g-header-main {
