@@ -273,6 +273,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #f12e24;
 }
 .g-header-menu .g-menu-container {
   height: 100%;
@@ -459,6 +460,10 @@ footer {
   margin-top: 10px;
 }
 
+.indexCartlist {
+  display: none;
+}
+
 .indexLeftNavShowConent {
   width: 970px;
   height: 90px;
@@ -471,7 +476,6 @@ footer {
   width: 457px;
   display: flex;
   align-items: center;
-  background-color: royalblue;
 }
 .indexLeftNavShowConent .hIndexvideoNavChangeNox .gNavTitle {
   display: flex;
@@ -496,12 +500,79 @@ footer {
   position: relative;
   left: 2px;
 }
+.indexLeftNavShowConent .indexLeftNavShowConent > a:nth-of-type(1) img {
+  width: 387px;
+  height: 78px;
+  border: 1px solid #e8e6e6;
+}
+.indexLeftNavShowConent .indexLeftNavShowConent > a:nth-of-type(2) img {
+  width: 112px;
+  height: 48px;
+}
 
 .gNavTV {
   width: 393px;
   height: 80px;
-  background-color: salmon;
   border: 1px solid #e8e6e6;
+  display: flex;
+  position: relative;
+}
+.gNavTV .TV {
+  margin: 5px 0;
+  height: 70px;
+  width: 100px;
+  background-color: #f12e24;
+}
+.gNavTV .TVGoods {
+  height: 78px;
+  width: 291px;
+  padding-left: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.gNavTV .TVGoods img {
+  width: 100%;
+  height: 22px;
+}
+.gNavTV .TVGoods a {
+  font-size: 13;
+  color: #31363c;
+}
+.gNavTV .TVGoods a:hover {
+  color: aqua;
+  text-decoration: underline;
+}
+.gNavTV .TVGoods .TVPrice {
+  display: flex;
+  height: 30px;
+  line-height: 30px;
+}
+.gNavTV .TVGoods .TVPrice span:nth-child(1) {
+  font-size: 14px;
+  color: red;
+}
+.gNavTV .TVGoods .TVPrice span:nth-child(2) {
+  font-size: 12px;
+  color: #ff9300;
+  padding-left: 5px;
+}
+.gNavTV .TVTime {
+  position: absolute;
+  right: 21px;
+  top: 9px;
+}
+.gNavTV .TVbtn {
+  width: 86px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  border: 1px solid #f12e24;
+  color: #f12e24;
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
 }
 
 .hindexTvrebo .Tvrebo .TvreboRight, .indexTvrebosliderBoxContent {
@@ -534,6 +605,9 @@ footer {
 .hindexTvrebo .Tvrebo .TvreboRight .listTv span:nth-of-type(1), .indexTvrebosliderBoxContent .listTv span:nth-of-type(1) {
   height: 36px;
   line-height: 36px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .hindexTvrebo .Tvrebo .TvreboRight .listTv span:nth-of-type(2), .indexTvrebosliderBoxContent .listTv span:nth-of-type(2) {
   color: red;

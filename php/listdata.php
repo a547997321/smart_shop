@@ -1,7 +1,12 @@
 <?php
 include "conn.php";
 
-$pagesize = 10; //单个页面展示的数据条数
+
+//CORS解决跨域(xhr2):跨域资源共享
+header('Access-Control-Allow-Origin:*');//跨域访问的域名，*表示所有
+header('Access-Control-Allow-Method:POST,GET');//跨域支持的请求方式。
+
+$pagesize = 12; //单个页面展示的数据条数
 
 $sql = "select * from taobaogoods"; //获取所有的数据
 $result = $conn->query($sql); //获取数据的结果集(记录集)

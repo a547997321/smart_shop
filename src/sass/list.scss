@@ -1,7 +1,8 @@
 @charset "utf-8";
 @import "indexheader";  //头部文件
 @import "indexFooterContent"; //尾部文件
-@import "listContent";
+@import "listContent"; //列表文件
+@import "pagination"; //分页文件
 
 
 body{

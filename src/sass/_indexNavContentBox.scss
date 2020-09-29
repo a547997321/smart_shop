@@ -51,6 +51,11 @@ $totalWidth: 1190px;
     }
 }
 
+// 二级菜单
+.indexCartlist{
+    display: none;
+}
+
 // 上方直播推荐
 .indexLeftNavShowConent {
     width: 970px;
@@ -64,13 +69,13 @@ $totalWidth: 1190px;
         width: 457px;
         display: flex;
         align-items: center;
-        background-color: royalblue;
 
         // 小标题 热门直播
         .gNavTitle {
             display: flex;
             flex-direction: column;
             position: relative;
+
 
             span {
                 width: 60px;
@@ -95,14 +100,92 @@ $totalWidth: 1190px;
             }
         }
     }
+
+    .indexLeftNavShowConent>a:nth-of-type(1) img{
+        width: 387px;
+        height: 78px;
+        border: 1px solid #e8e6e6;
+    }
+    .indexLeftNavShowConent>a:nth-of-type(2) img{
+        width: 112px;
+        height: 48px;
+    }
 }
 
 // 电视购物
 .gNavTV {
     width: 393px;
     height: 80px;
-    background-color: salmon;
     border: 1px solid #e8e6e6;
+    display: flex;
+    position: relative;
+
+    .TV{
+        margin: 5px 0;
+        height: 70px;
+        width: 100px;
+        background-color: #f12e24;
+    }
+
+    .TVGoods{
+        height: 78px;
+        width: 291px;
+        padding-left: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        img{
+            width: 100%;
+            height: 22px;
+        }
+
+        a{
+            font-size: 13;
+            color: #31363c;
+        }
+        a:hover{
+            color: aqua;
+            text-decoration:underline;
+        }
+
+        .TVPrice{
+            display: flex;
+            height: 30px;
+            line-height: 30px;
+
+            span:nth-child(1){
+                font-size: 14px;
+                color: red;
+            }
+            span:nth-child(2){
+                font-size: 12px;
+                color: rgb(255,147,0);
+                padding-left: 5px;
+            }
+        }
+    }
+
+    // 时间
+    .TVTime{
+        position: absolute;
+        right: 21px;
+        top: 9px;
+    }
+    // 看直播
+    .TVbtn{
+        width: 86px;
+        height: 24px;
+        line-height: 24px;
+        text-align: center;
+        border: 1px solid #f12e24;
+        color: #f12e24;
+        position: absolute;
+        right: 6px;
+        bottom: 6px;
+
+    }
 }
 
 
@@ -139,6 +222,9 @@ $totalWidth: 1190px;
         span:nth-of-type(1) {
             height: 36px;
             line-height: 36px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         span:nth-of-type(2) {

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>商品列表页</title>
 
     <link rel="stylesheet" href="./css/list.css">
     <link rel="stylesheet" href="./css/common.css">
@@ -157,8 +157,19 @@
             <!-- 商品筛选、商品列表 -->
             <div class="listRight">
                 <div class="pv_shop_list_bar">
-                    <div><a>销量</a></div>
-                    <div><a>价格</a></div>
+                    <div><a class="list_default">默认排序</a></div>
+                    <div><a class="list_up">升序排序</a></div>
+                    <div><a class="list_down">降序排序</a></div>
+                </div>
+                <!-- 商品列表 -->
+                <div class="pv_shop_list_content"></div>
+
+                <!-- 分页的结构 -->
+                <div class="pv_list">
+                    <div class="pagelist">
+                        <div class="m-style page">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

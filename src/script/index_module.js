@@ -1,10 +1,10 @@
-define([], function () {
+define(['jlazyload'], function () {
     return {
         // 主播推荐数据
         init: function () {
             // 主播推荐
             $.ajax({
-                url: 'http://192.168.13.66/projectname/php/listdata.php',
+                url: 'http://localhost/smart_shop/php/listdata.php',
                 dataType: "json"
             }).done(function (data) {
                 let strhtml = "";
@@ -27,7 +27,7 @@ define([], function () {
 
             // 团购接口
             $.ajax({
-                url: 'http://192.168.13.66/projectname/php/listdata.php',
+                url: 'http://localhost/smart_shop/php/listdata.php',
                 dataType: "json"
             }).done(function (data) {
                 let strhtml = "";
@@ -39,11 +39,17 @@ define([], function () {
                     }
                 })
                 $('.indexTvrebosliderBoxContent').html(strhtml);
+                // 懒加载
+                $(function () { //和拼接的元素放在一起。
+                    $("img.lazy").lazyload({
+                        effect: "fadeIn" //图片显示方式
+                    });
+                });
             });
 
             // 食品饮料
             $.ajax({
-                url: 'http://192.168.13.66/projectname/php/listdata.php',
+                url: 'http://localhost/smart_shop/php/listdata.php',
                 dataType: "json"
             }).done(function (data) {
                 let strhtml = "";
@@ -55,6 +61,12 @@ define([], function () {
                     }
                 })
                 $('.hindexProjectListBoxRight').html(strhtml);
+                // 懒加载
+                $(function () { //和拼接的元素放在一起。
+                    $("img.lazy").lazyload({
+                        effect: "fadeIn" //图片显示方式
+                    });
+                });
             });
 
             // 懒加载

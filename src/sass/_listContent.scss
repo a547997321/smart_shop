@@ -29,6 +29,9 @@ $totalWidth: 1110px;
             height: 36px;
             line-height: 36px;
             cursor: pointer;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         &:hover {
@@ -129,17 +132,19 @@ $totalWidth: 1110px;
     }
 }
 
-.listRight{
+// 商品筛选、商品列表
+.listRight {
     width: 900px;
 
-    .pv_shop_list_bar{
+    // 排序选择
+    .pv_shop_list_bar {
         width: 900px;
         height: 42px;
         border: #d7d7d7 1px solid;
         display: flex;
         align-items: center;
 
-        div{
+        div {
             width: 67px;
             height: 30px;
             line-height: 30px;
@@ -149,9 +154,53 @@ $totalWidth: 1110px;
             margin-left: 5px;
         }
 
-        .active{
-            border: 1px solid rgb(241,46,36);
+        div:hover {
+            border: 1px solid rgb(241, 46, 36);
         }
-
     }
+
+}
+
+// 商品列表
+.pv_shop_list_content {
+    width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.pv_shop_list_content>div a{
+    display: block;
+    width: 220px;
+    height: 390px;
+    padding: 0 30px;
+    border-bottom: 1px solid #d7d7d7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .img {
+        width: 160px;
+        height: 161px;
+        border-bottom: 1px dotted #d7d7d7;
+        margin-bottom: 30px;
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &>span:nth-of-type(2),
+    &>span:nth-of-type(4) {
+        margin-top: 8px;
+        font-size: 12px;
+    }
+
+    &>span:nth-of-type(3) {
+        margin-top: 16px;
+        font-size: 18px;
+    }
+
 }
