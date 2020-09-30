@@ -1,0 +1,41 @@
+$totalWidth:1190px;
+
+.registryContent {
+    width: $totalWidth;
+}
+
+.rc-header {
+    width: 100%;
+    background-color: #239cdc;
+    height: 70px;
+    padding-left: 57px;
+    display: flex;
+    align-items: flex-end;
+
+
+    &>span {
+        width: 204px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        font-size: 18px;
+        color: ;
+        font-family: "Microsoft Yahei",Arial, Helvetica, sans-serif;
+        background-color: #239cdc;
+        cursor: pointer;
+    }
+
+    .active{
+        background-color: white;
+        color: black;
+    }
+
+    p{
+        margin-left: 190px;
+        margin-bottom: 27px;
+
+        a{
+            color: black;
+        }
+    }
+}

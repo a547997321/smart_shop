@@ -81,11 +81,11 @@ define(['jlazyload'], function () {
                 const $loutili = $('.louti'); //包含回到顶部
                 const $louceng = $('.louceng');
 
-                $(window).on('scroll', function() {
+                $(window).on('scroll', function () {
                     let $top = $(window).scrollTop(); //滚动条离顶部的距离
-            
+
                     //4.拖动滚动条，给对应楼梯添加标识(对应哪个楼层)
-                    $louceng.each(function(index, element) {
+                    $louceng.each(function (index, element) {
                         let $loucengtop = $(element).offset().top + $(element).height() / 3; //楼层top值
                         console.log($loucengtop);
                         //如果楼层top的值大于滚动条的top值，添加active.
@@ -153,7 +153,6 @@ define(['jlazyload'], function () {
                     })(i)
                 }
             });
-
         }
     }
 })
