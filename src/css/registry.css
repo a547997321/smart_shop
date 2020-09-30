@@ -1,85 +1,505 @@
-/*
-Error: Invalid CSS after "        color: ": expected expression (e.g. 1px, bold), was ";"
-        on line 22 of sass/_registryContent.scss
-        from line 4 of sass/./registry.scss
+header {
+  width: 100%;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+}
 
-17:         width: 204px;
-18:         height: 60px;
-19:         line-height: 60px;
-20:         text-align: center;
-21:         font-size: 18px;
-22:         color: ;
-23:         font-family: "Microsoft Yahei",Arial, Helvetica, sans-serif;
-24:         background-color: #239cdc;
-25:         cursor: pointer;
-26:     }
-27: 
+.g-site-nav {
+  width: 100%;
+  height: 32px;
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #d9d9d7;
+}
+.g-site-nav .g-site-content {
+  width: 1190px;
+  height: 32px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.g-site-nav .g-site-nav-left {
+  display: flex;
+  align-items: center;
+}
+.g-site-nav .g-site-nav-left .g-welcome {
+  padding-left: 19px;
+  padding-right: 14px;
+}
+.g-site-nav .g-site-nav-left .g-normal {
+  padding: 0 3px;
+}
+.g-site-nav .g-site-nav-right {
+  display: flex;
+  align-items: center;
+}
+.g-site-nav .g-site-nav-right > span {
+  text-align: center;
+  margin-left: 6px;
+}
+.g-site-nav .g-site-nav-right .g-myocj {
+  width: 100px;
+}
+.g-site-nav .g-site-nav-right .g-myocj:hover,
+.g-site-nav .g-site-nav-right .g-weixin:hover {
+  height: 24px;
+  line-height: 24px;
+  position: relative;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-bottom: none;
+}
+.g-site-nav .g-site-nav-right .g-myocj:hover .g-myocj-more {
+  display: block;
+}
+.g-site-nav .g-site-nav-right .g-myocj:hover .icon-down {
+  display: inline-block;
+}
+.g-site-nav .g-site-nav-right .g-myocj:hover .icon-up {
+  display: none;
+}
+.g-site-nav .g-site-nav-right .icon-down {
+  display: none;
+}
+.g-site-nav .g-site-nav-right .g-myocj-more {
+  display: none;
+  position: relative;
+  width: 100px;
+  line-height: 32px;
+  border: 1px solid #ccc;
+  border-top: none;
+  background-color: white;
+  top: -1px;
+  left: -1px;
+}
+.g-site-nav .g-site-nav-right .g-myocj-more li {
+  text-align: center;
+}
+.g-site-nav .g-site-nav-right .g-weixin {
+  width: 70px;
+  position: relative;
+}
+.g-site-nav .g-site-nav-right .g-weixin-pic {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 22px;
+  right: -1px;
+  border: 1px solid #ccc;
+  background-color: white;
+  z-index: -1;
+}
+.g-site-nav .g-site-nav-right .g-weixin-pic img {
+  width: 222px;
+  height: 222px;
+  padding: 0 13px;
+}
+.g-site-nav .g-site-nav-right .g-weixin:hover .g-weixin-pic {
+  display: block;
+}
 
-Backtrace:
-sass/_registryContent.scss:22
-sass/./registry.scss:4
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1189:in `expected'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/script/lexer.rb:229:in `expected!'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/script/parser.rb:704:in `assert_expr'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/script/parser.rb:75:in `parse'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1051:in `sass_script'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:897:in `value!'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:769:in `block in try_declaration'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1165:in `rethrow'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:782:in `try_declaration'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:711:in `declaration_or_ruleset'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:676:in `block_child'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:668:in `block_contents'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:657:in `block'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:726:in `declaration_or_ruleset'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:676:in `block_child'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:668:in `block_contents'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:657:in `block'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:649:in `ruleset'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:675:in `block_child'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:668:in `block_contents'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:125:in `stylesheet'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:41:in `parse'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/engine.rb:406:in `_to_tree'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/engine.rb:312:in `to_tree'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:326:in `block in visit_import'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `block in with_import'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `with_import'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:325:in `visit_import'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `map'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:159:in `visit'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:8:in `visit'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:36:in `css_tree'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:331:in `block in watch'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"        color: \": expected expression (e.g. 1px, bold), was \";\"\A         on line 22 of sass/_registryContent.scss\A         from line 4 of sass/./registry.scss\A \A 17:         width: 204px;\A 18:         height: 60px;\A 19:         line-height: 60px;\A 20:         text-align: center;\A 21:         font-size: 18px;\A 22:         color: ;\A 23:         font-family: \"Microsoft Yahei\",Arial, Helvetica, sans-serif;\A 24:         background-color: #239cdc;\A 25:         cursor: pointer;\A 26:     }\A 27: "; }
+.g-side-bar {
+  width: 84px;
+  position: fixed;
+  bottom: 10px;
+  right: 50%;
+  margin-right: -690px;
+  z-index: 200000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.g-side-bar .g-side-AD {
+  width: 100%;
+  height: 80px;
+}
+.g-side-bar .g-side-AD img {
+  width: 100%;
+  height: 100%;
+}
+.g-side-bar .bird {
+  border-top: 1px dotted #d3d3d3;
+  width: 100%;
+  height: 22px;
+  padding-top: 55px;
+  text-align: center;
+  background: #fff url(https://cdnimg.ocj.com.cn/common/theme/v1/images/common/bg.site.nav.png) 16px -539px no-repeat;
+}
+.g-side-bar .bird-txt1 {
+  height: 22px;
+  line-height: 22px;
+}
+.g-side-bar .bird-txt1 a {
+  text-align: center;
+  color: #5c686e;
+}
+.g-side-bar .g-go-top {
+  width: 84px;
+  height: 30px;
+  background: #4b4c50 url(https://cdnimg.ocj.com.cn/common/theme/v1/images/common/bg.site.nav.png) -1px -604px no-repeat;
+  color: #fff;
+  font-weight: bold;
+  text-indent: 23px;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.g-side-bar ul {
+  height: 20px;
+  width: 84px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.g-side-bar li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.g-side-bar .rightFixNavButtonLink {
+  width: 84px;
+  height: 26px;
+  line-height: 26px;
+  color: #3c3c3c;
+  text-align: center;
+}
+
+#img-box {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+#img-box img {
+  position: absolute;
+  display: block;
+  opacity: 0;
+  float: left;
+  cursor: pointer;
+}
+
+#img-box #img-num {
+  position: absolute;
+  /* border:2px solid red; */
+  bottom: 0px;
+  left: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#img-box #img-num li {
+  display: inline-block;
+  list-style: none;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #cccfd4;
+  margin-left: 5px;
+  position: relative;
+  top: 15px;
+}
+
+.g-header-main {
+  height: 82px;
+  width: 1190px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.g-header-main > img:nth-of-type(1) {
+  width: 140px;
+  height: 74px;
+}
+.g-header-main > img:nth-of-type(2) {
+  width: 210px;
+  height: 70px;
+}
+.g-header-main > img:nth-of-type(3) {
+  width: 140px;
+  height: 69px;
+}
+.g-header-main .search-bar {
+  width: 444px;
+  height: 34px;
+  border: 3px solid #f12e24;
+  position: relative;
+}
+.g-header-main .search-bar input {
+  float: left;
+  width: 364px;
+  height: 28px;
+  line-height: 34px;
+  text-indent: 8px;
+  border: 0;
+  color: #9da6ab;
+}
+.g-header-main .search-bar button {
+  float: left;
+  background: #f12e24;
+  width: 74px;
+  height: 28px;
+  border: 0;
+  color: #fff;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Microsoft YaHei';
+  cursor: pointer;
+}
+.g-header-main .search-bar ul {
+  width: 364px;
+  height: 28px;
+  line-height: 28px;
+  position: absolute;
+  top: 28px;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.g-header-menu {
+  width: 100%;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f12e24;
+}
+.g-header-menu .g-menu-container {
+  height: 100%;
+  width: 1190px;
+  display: flex;
+  justify-content: start;
+}
+.g-header-menu .g-menu-container a {
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  padding: 0 19px;
+  font-weight: bold;
+  color: #fff;
+  font-size: 15px;
+}
+.g-header-menu .g-menu-container a:first-child {
+  width: 220px;
+}
+.g-header-menu .g-menu-container a:hover {
+  background-color: #b8362f;
+}
+
+footer {
+  width: 1190px;
+}
+
+.g-footer-menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.g-footer-menu .menu {
+  width: 838px;
+  height: 184px;
+  display: flex;
+  justify-content: space-around;
+}
+.g-footer-menu .list {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.g-footer-menu .list .title-1 {
+  width: 30px;
+  height: 29px;
+  background-image: url(https://cdnimg.ocj.com.cn/common/webpc/image/imageindex/newflootimg0.png);
+  margin-bottom: 11px;
+}
+.g-footer-menu .list li {
+  height: 20px;
+  line-height: 20px;
+}
+.g-footer-menu .list li a {
+  color: #6d7177;
+}
+.g-footer-menu .list .title {
+  font-size: 14px;
+  font-family: 'Microsoft YaHei';
+  font-weight: bold;
+  color: #505966;
+  height: 25px;
+}
+.g-footer-menu .g-footer-fr-board {
+  width: 338px;
+  height: 147px;
+  border: 1px solid #d9d9d9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.g-footer-menu .g-footer-fr-board > div:nth-child(1) {
+  width: 100%;
+  height: 29px;
+  display: flex;
+  justify-content: space-between;
+}
+.g-footer-menu .g-footer-fr-board > div:nth-child(1) p {
+  font-family: 'Microsoft YaHei';
+  font-size: 14px;
+}
+.g-footer-menu .g-footer-fr-board > div:nth-child(1) > a:nth-of-type(1) {
+  color: blue;
+}
+.g-footer-menu .g-footer-fr-board > div:nth-child(2) {
+  width: 100%;
+  height: 87px;
+  display: flex;
+  justify-content: space-around;
+}
+.g-footer-menu .g-footer-fr-board > div:nth-child(2) img {
+  width: 158px;
+  height: 87px;
+}
+
+.g-line {
+  width: 1190px;
+  height: 2px;
+  background-color: #5c686e;
+}
+
+.g-footer-content {
+  width: 1190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.g-footer-content .logo-dfmz {
+  width: 170px;
+  height: 42px;
+  left: 0;
+  top: 20px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.g-footer-content .logo-dfmz img {
+  width: 126px;
+  height: 100%;
+}
+.g-footer-content .logo-dfmz span {
+  margin: 8px;
+  color: #82888b;
+  font-size: 12px;
+}
+.g-footer-content .textIntroFooter {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.g-footer-content .textIntroFooter div {
+  height: 20px;
+  line-height: 20px;
+}
+.g-footer-content ul {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.registryContent {
+  width: 1190px;
+}
+
+.rc-header {
+  width: 100%;
+  background-color: #239cdc;
+  color: white;
+  height: 70px;
+  padding-left: 57px;
+  display: flex;
+  align-items: flex-end;
+  font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
+}
+.rc-header > span {
+  width: 204px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 18px;
+  background-color: #239cdc;
+  cursor: pointer;
+}
+.rc-header .active {
+  background-color: white;
+  color: black;
+}
+.rc-header p {
+  margin-left: 190px;
+  margin-bottom: 27px;
+}
+.rc-header p a {
+  color: black;
+}
+
+.rc-content {
+  width: 1190px;
+  height: 514px;
+  display: flex;
+  background-color: blueviolet;
+}
+
+.rc-left {
+  width: 862px;
+  height: 100%;
+  background-color: brown;
+}
+.rc-left .rc-way {
+  position: relative;
+}
+.rc-left .rc-way > img {
+  width: 30px;
+  height: 40px;
+}
+.rc-left .rc-way > h3 {
+  color: #3c3c3c;
+  font-size: 30px;
+  font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+.rc-left .rc-way > span {
+  font-size: 16px;
+}
+.rc-left .rc-way > a {
+  display: block;
+  background: url("https://www.ocj.com.cn/common/theme/v1/images/passport/regist_ml_icon.jpg") no-repeat left 3px;
+  position: absolute;
+}
+
+.rc-right {
+  width: 328px;
+  height: 100%;
+  background-color: chartreuse;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*# sourceMappingURL=registry.css.map */

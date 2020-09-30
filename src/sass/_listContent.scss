@@ -164,6 +164,7 @@ $totalWidth: 1110px;
 // 商品列表
 .pv_shop_list_content {
     width: 900px;
+    height: 1170px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -176,7 +177,7 @@ $totalWidth: 1110px;
     height: 390px;
     padding: 0 30px;
     border-bottom: 1px solid #d7d7d7;
-    display: flex;
+    display: flex; 
     flex-direction: column;
     justify-content: center;
 
@@ -203,4 +204,11 @@ $totalWidth: 1110px;
         font-size: 18px;
     }
 
+    div{
+        display: flex;
+
+        p{
+            border: 1px solid black;
+        }
+    }
 }

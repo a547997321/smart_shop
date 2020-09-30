@@ -4,13 +4,16 @@ $totalWidth:1190px;
     width: $totalWidth;
 }
 
+// 注册头部
 .rc-header {
     width: 100%;
     background-color: #239cdc;
+    color: white;
     height: 70px;
     padding-left: 57px;
     display: flex;
     align-items: flex-end;
+    font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
 
 
     &>span {
@@ -19,23 +22,77 @@ $totalWidth:1190px;
         line-height: 60px;
         text-align: center;
         font-size: 18px;
-        color: ;
-        font-family: "Microsoft Yahei",Arial, Helvetica, sans-serif;
         background-color: #239cdc;
         cursor: pointer;
     }
 
-    .active{
+    .active {
         background-color: white;
         color: black;
     }
 
-    p{
+    p {
         margin-left: 190px;
         margin-bottom: 27px;
 
-        a{
+        a {
             color: black;
         }
     }
+}
+
+// 注册内容
+.rc-content {
+    width: 1190px;
+    height: 514px;
+    display: flex;
+    background-color: blueviolet;
+
+
+}
+
+// 注册左侧
+.rc-left {
+    width: 862px;
+    height: 100%;
+    background-color: brown;
+
+    // 注册方式
+    .rc-way {
+        position: relative;
+        &>img {
+            width: 30px;
+            height: 40px;
+        }
+
+        &>h3 {
+            color: #3c3c3c;
+            font-size: 30px;
+            font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
+            font-weight: normal;
+        }
+
+        &>span {
+            font-size: 16px;
+        }
+
+        &>a{
+            display: block;
+
+            background: url("https://www.ocj.com.cn/common/theme/v1/images/passport/regist_ml_icon.jpg") no-repeat left 3px;
+            position: absolute;
+        }
+    }
+
+    // 注册信息
+    .rc-message {}
+}
+
+// 右侧
+.rc-right {
+    width: 328px;
+    height: 100%;
+    background-color: chartreuse;
+
+
 }

@@ -47,8 +47,9 @@ define(["pagination", 'jlazyload'], function () {
                     <a href="detail.html?sid=${value.sid}" target="_blank">
                     <span class="img"><img class="lazy" data-original="${value.url}" alt=""></span>
                         <span>${value.title}</span>
-                        <span class="price">￥${value.price}</span>
+                        <span class="price">${value.price}</span>
                         <span>积分${value.price}</span>
+                        <div><p>嘿嘿嘿</p><p>嘿嘿嘿</p><p>嘿嘿嘿</p></div>
                         </a>
                     </div>
                     `;
@@ -61,7 +62,7 @@ define(["pagination", 'jlazyload'], function () {
                 prev = null;
                 next = null;
                 //将页面的li元素追加到两个数组中。
-                $('.pv_shop_list_content div').each(function (index, element) {
+                $('.pv_shop_list_content>div').each(function (index, element) {
                     array[index] = $(this);
                     array_default[index] = $(this);
                 });
@@ -98,11 +99,13 @@ define(["pagination", 'jlazyload'], function () {
                             $strhtml += `
                             <div>
                             <a href="detail.html?sid=${value.sid}" target="_blank">
-                            <span class="img"><img class="lazy" data-original="${value.url}" alt=""></span>
+                                <span class="img"><img class="lazy" data-original="${value.url}" alt=""></span>
                                 <span>${value.title}</span>
-                                <span class="price">￥${value.price}</span>
-                                <span>积分${value.price}</span>
-                                </a>
+                              
+                            </a>
+                            <span class="price">${value.price}</span>
+                            <span>积分${value.price}</span>
+                            <div><p>嘿嘿嘿</p><p>嘿嘿嘿</p><p>嘿嘿嘿</p></div>
                             </div>
                             `;
                         });
@@ -144,8 +147,9 @@ define(["pagination", 'jlazyload'], function () {
             $('.list_up').on('click', function () {
                 for (let i = 0; i < array.length - 1; i++) {
                     for (let j = 0; j < array.length - i - 1; j++) {
-                        prev = parseFloat(array[j].find('.price').html().substring(1)); //获取上一个价格
-                        next = parseFloat(array[j + 1].find('.price').html().substring(1)); //获取下一个价格
+                        console.log(array[j].find('.price').html())
+                        prev = parseFloat(array[j].find('.price').html()); //获取上一个价格
+                        next = parseFloat(array[j + 1].find('.price').html()); //获取下一个价格
                         //通过价格的判断，改变的是li的位置。
                         if (prev > next) {
                             let temp = array[j];
@@ -163,8 +167,8 @@ define(["pagination", 'jlazyload'], function () {
             $('.list_down').on('click', function () {
                 for (let i = 0; i < array.length - 1; i++) {
                     for (let j = 0; j < array.length - i - 1; j++) {
-                        prev = parseFloat(array[j].find('.price').html().substring(1)); //获取上一个价格
-                        next = parseFloat(array[j + 1].find('.price').html().substring(1)); //获取下一个价格
+                        prev = parseFloat(array[j].find('.price').html()); //获取上一个价格
+                        next = parseFloat(array[j + 1].find('.price').html()); //获取下一个价格
                         //通过价格的判断，改变的是li的位置。
                         if (prev < next) {
                             let temp = array[j];
